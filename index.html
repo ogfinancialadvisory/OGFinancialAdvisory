@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OG Financial Advisory provides practical fractional CFO and strategic finance support to construction, trades, retail, manufacturing businesses and nonprofits in Cambridge and Waterloo Region.">
+  <title>OG Financial Advisory | Financial Clarity. Better Decisions.</title>
+  <style>
+    :root{--navy:#142f50;--navy2:#0d223b;--gold:#c99a35;--ink:#1c2a39;--muted:#607080;--paper:#f6f8fb;--white:#fff;--line:#e2e8ef}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit} .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800;letter-spacing:.02em}
+    .mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:11px;display:grid;place-items:center;font-size:17px;font-weight:900}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.19em;font-weight:700}
+    .navlinks{display:flex;gap:25px;align-items:center;font-size:14px;color:#405164}
+    .navlinks a{text-decoration:none}.navlinks a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:7px;background:var(--gold);color:#15263a;text-decoration:none;font-weight:800;font-size:14px;border:1px solid var(--gold);transition:.2s}
+    .btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+    .btn.outline{background:transparent;color:white;border-color:#ffffff80}
+    .hero{background:linear-gradient(120deg,var(--navy2),var(--navy));color:white;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:470px;height:470px;border:1px solid #ffffff18;border-radius:50%;right:-100px;top:-190px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}
+    .hero-inner{position:relative;z-index:1;padding:94px 0 100px;max-width:790px}
+    .eyebrow{color:#e3bd6d;text-transform:uppercase;letter-spacing:.19em;font-weight:800;font-size:11px}
+    h1{font-size:clamp(38px,6vw,66px);line-height:1.08;letter-spacing:-.045em;margin:18px 0 22px}
+    .hero p{font-size:18px;color:#e0e8f0;max-width:660px;margin:0 0 30px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+    .subline{margin-top:34px;color:#c4d0dc;font-size:13px}
+    section{padding:82px 0} .soft{background:var(--paper)}
+    .section-head{max-width:700px;margin-bottom:38px}
+    .kicker{color:#a8791c;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:850}
+    h2{color:var(--navy);font-size:clamp(29px,4vw,42px);line-height:1.18;letter-spacing:-.03em;margin:10px 0 14px}
+    .lead{color:var(--muted);font-size:17px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:white;border:1px solid var(--line);border-radius:12px;padding:25px;min-height:205px}
+    .service .num{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.12em}
+    h3{color:var(--navy);font-size:18px;line-height:1.3;margin:12px 0 9px}
+    .service p,.audience p{margin:0;color:var(--muted);font-size:14px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .panel{background:var(--navy);color:white;padding:34px;border-radius:14px}
+    .panel h3{color:white;font-size:23px;margin-top:0}
+    .panel p{color:#d7e0e9}
+    .checks{list-style:none;padding:0;margin:22px 0 0}
+    .checks li{padding:8px 0 8px 27px;position:relative;color:#e6edf4;font-size:14px}
+    .checks li:before{content:"✓";position:absolute;left:0;color:#e2bd6c;font-weight:900}
+    .audience{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .audience article{padding:24px;border-left:3px solid var(--gold);background:white}
+    .about-copy{color:var(--muted)}
+    .credentials{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .pill{border:1px solid var(--line);border-radius:30px;padding:7px 12px;color:var(--navy);font-size:12px;font-weight:750;background:white}
+    .cta{background:linear-gradient(120deg,#102742,#1b4167);color:white;text-align:center}
+    .cta h2{color:white}.cta p{color:#d7e1eb;max-width:650px;margin:0 auto 26px}
+    .contactline{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:25px;font-size:14px;color:#e5edf5}
+    .contactline a{text-decoration:none}
+    footer{padding:28px 0;background:#0b1d31;color:#aebdcb;font-size:12px}
+    footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .disclaimer{max-width:780px;margin-top:12px;color:#8fa0b1;font-size:11px}
+    @media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr;gap:30px}.audience{grid-template-columns:1fr}}
+    @media(max-width:540px){.wrap{width:min(100% - 30px,1120px)}.hero-inner{padding:72px 0}.grid{grid-template-columns:1fr}section{padding:62px 0}.service{min-height:0}.panel{padding:26px}.nav{height:68px}}
+  </style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#top" aria-label="OG Financial Advisory home">
+    <span class="mark">OG</span><span>OG FINANCIAL ADVISORY<small>INSIGHT · STRATEGY · IMPACT</small></span>
+  </a>
+  <nav class="navlinks" aria-label="Main navigation">
+    <a href="#services">Services</a><a href="#who-we-help">Who We Help</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn" href="#contact">Let's Talk</a>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">Fractional CFO · Strategic Finance Advisory</div>
+      <h1>Financial Clarity.<br>Better Decisions.<br>Stronger Businesses.</h1>
+      <p>Practical financial insight for business owners and nonprofit leaders who want to understand their numbers, improve performance and plan their next move with confidence.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Book an Introductory Conversation</a>
+        <a class="btn outline" href="#services">Explore Our Services</a>
+      </div>
+      <div class="subline">Based in Cambridge, Ontario · Serving Waterloo Region and nearby communities</div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">How we help</div>
+        <h2>Finance that helps you move forward.</h2>
+        <p class="lead">Clear, practical financial support that connects the numbers to the decisions you make every day.</p>
+      </div>
+      <div class="grid">
+        <article class="service"><div class="num">01 / PLAN</div><h3>Financial Planning & Forecasting</h3><p>Build budgets, rolling forecasts and scenarios that help you prepare for what is ahead.</p></article>
+        <article class="service"><div class="num">02 / CASH</div><h3>Cash Flow & Working Capital</h3><p>Improve visibility into cash needs, collections, payables and the timing of business decisions.</p></article>
+        <article class="service"><div class="num">03 / PROFIT</div><h3>Project & Job Profitability</h3><p>Understand margins by project, customer, service line or product—and identify what drives results.</p></article>
+        <article class="service"><div class="num">04 / PERFORMANCE</div><h3>Management Reporting & KPIs</h3><p>Turn financial and operational information into useful dashboards and management insights.</p></article>
+        <article class="service"><div class="num">05 / OPERATIONS</div><h3>Cost & Operational Analysis</h3><p>Examine labour, materials, overhead and productivity to support better operating decisions.</p></article>
+        <article class="service"><div class="num">06 / INVEST</div><h3>Investment Appraisal</h3><p>Assess capital projects, equipment purchases, expansion plans and other business investments before committing resources.</p></article>
+        <article class="service"><div class="num">07 / VALUE</div><h3>Cost-Benefit & ROI Analysis</h3><p>Compare expected costs with measurable financial and operational benefits. Evaluate return on investment, payback periods and key assumptions.</p></article>
+        <article class="service"><div class="num">08 / DECIDE</div><h3>Strategic Recommendations</h3><p>Translate financial analysis into clear, practical recommendations—including options, risks, trade-offs and next steps—to support informed decisions.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="who-we-help">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Who we work with</div>
+        <h2>Built around the realities of your organization.</h2>
+        <p class="lead">Flexible finance support for organizations that want stronger visibility and more confident decisions without necessarily hiring a full-time CFO.</p>
+      </div>
+      <div class="audience">
+        <article><h3>Construction & Trades</h3><p>Project costing, job margins, cash-flow forecasting, labour and subcontractor cost visibility.</p></article>
+        <article><h3>Manufacturing & Distribution</h3><p>Production performance, cost analysis, inventory and working capital, budgets and operational KPIs.</p></article>
+        <article><h3>Retail & Consumer Businesses</h3><p>Sales and gross-margin analysis, inventory performance, labour planning, store or channel reporting and budgeting.</p></article>
+        <article><h3>Charities & Nonprofits</h3><p>Program budgeting, funding scenarios, management reporting and financial sustainability planning.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap two">
+      <div>
+        <div class="kicker">Meet your finance partner</div>
+        <h2>Experience that connects finance with operations.</h2>
+        <p class="about-copy"><strong>Osborn Gohori, MBA</strong> brings 15 years of finance and business-partnering experience across the nonprofit sector, retail, manufacturing, distribution, digital fulfillment, marketing and IT.</p>
+        <p class="about-copy">That experience includes financial planning and analysis, budgeting, forecasting, performance reporting, cost analysis, investment evaluation and working alongside operational leaders to turn financial information into practical recommendations and action.</p>
+        <div class="credentials"><span class="pill">MBA</span><span class="pill">US CPA Candidate</span><span class="pill">15 Years' Experience</span></div>
+      </div>
+      <aside class="panel">
+        <h3>A practical, collaborative approach.</h3>
+        <p>Good financial advice should make the next decision clearer—not bury you in reports.</p>
+        <ul class="checks">
+          <li>Understand your current financial picture</li>
+          <li>Identify the questions that matter most</li>
+          <li>Build practical tools and recommendations</li>
+          <li>Support better decisions as your organization grows</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap two">
+      <div>
+        <div class="kicker">Start with clarity</div>
+        <h2>Financial Health Check</h2>
+        <p class="lead">A focused first conversation to understand your priorities and explore where better financial visibility could help.</p>
+      </div>
+      <div>
+        <p class="about-copy">Depending on your needs, an initial review may explore cash-flow visibility, project or program profitability, budgeting, reporting, key performance indicators, investment proposals and opportunities to improve returns. Where appropriate, we can assess costs against expected benefits and provide practical recommendations. Any scope, deliverables and fees would be agreed before work begins.</p>
+        <a class="btn" href="#contact">Discuss a Financial Health Check</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <div class="kicker">Let's start a conversation</div>
+      <h2>Make your numbers work harder for you.</h2>
+      <p>Tell us what you are working toward. Let's explore how practical financial insight can support your next decision.</p>
+      <a class="btn" href="tel:+16473387760">Call 647-338-7760</a>
+      <div class="contactline">
+        <a href="mailto:hello@ogfinancialadvisory.ca">hello@ogfinancialadvisory.ca</a>
+        <span>Cambridge, Ontario</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><strong>OG FINANCIAL ADVISORY</strong><span>Insight · Strategy · Impact</span><span>© <span id="year">2026</span> OG Financial Advisory</span></div>
+    <div class="disclaimer">OG Financial Advisory provides non-assurance financial planning and business advisory services. It does not provide audit, review, compilation or other assurance services, legal advice, or tax representation. Osborn Gohori is an MBA and US CPA candidate and is not represented as a licensed CPA in Ontario. Engagement scope and fees are agreed in advance.</div>
+  </div>
+</footer>
+</body>
+</html>
